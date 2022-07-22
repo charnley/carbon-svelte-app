@@ -1,15 +1,12 @@
 {
-    "name": "regiosqm-svelte-app",
+    "name": "example-svelte-carbon-app",
     "version": "1.0.0",
     "private": true,
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
         "start": "sirv public --no-clear",
-        "format": "prettier --write \"./**/*.{js,jsx,json,svelte}\" --ignore-path .gitignore",
-        "test": "jest --watchAll",
-        "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "format": "prettier --write \"./**/*.{js,jsx,json,svelte}\" --ignore-path .gitignore"
     },
     "devDependencies": {
         "@carbon/charts-svelte": "^1.4.0",
