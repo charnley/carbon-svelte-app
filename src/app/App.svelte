@@ -1,5 +1,6 @@
 <script>
   import "carbon-components-svelte/css/all.css";
+  import "@carbon/charts/styles.min.css";
   import {
     Header,
     HeaderUtilities,
@@ -22,14 +23,16 @@
   import SettingsAdjust from "carbon-icons-svelte/lib/SettingsAdjust.svelte";
   import UserAvatarFilledAlt from "carbon-icons-svelte/lib/UserAvatarFilledAlt.svelte";
 
+  import SummaryDashboard from "./features/SummaryDashboard/index.svelte";
+
   let isSideNavOpen = false;
   let isOpen1 = false;
   let isOpen2 = false;
 </script>
 
 <Header
-  company="Pokedex"
-  platformName="Pokemon Stats"
+  company="FakeCompany"
+  platformName="DataOverview"
   bind:isSideNavOpen
   persistentHamburgerMenu={true}
 >
@@ -88,7 +91,7 @@
   <Grid>
     <Row>
       <Column>
-        <h1>Welcome</h1>
+        <SummaryDashboard />
       </Column>
     </Row>
   </Grid>

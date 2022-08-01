@@ -5,6 +5,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import livereload from 'rollup-plugin-livereload'
 import {terser} from 'rollup-plugin-terser'
 import css from 'rollup-plugin-css-only';
+import replace from '@rollup/plugin-replace';
 
 import sveltePreprocess from 'svelte-preprocess'
 
@@ -42,6 +43,11 @@ export default {
     plugins: [
         svelte({
         }),
+// Fix for ReferenceError: process is not defined
+replace({
+			preventAssignment: true,
+			'process.env.NODE_ENV': JSON.stringify('production'),
+		}),
         css({output: 'bundle.css'}),
 
         // If you have external dependencies installed from

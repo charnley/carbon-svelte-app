@@ -12,6 +12,7 @@
         "@carbon/charts-svelte": "^1.4.0",
         "@rollup/plugin-commonjs": "^17.0.0",
         "@rollup/plugin-node-resolve": "^11.0.0",
+        "@rollup/plugin-replace": "^4.0.0",
         "carbon-components-svelte": "^0.67.1",
         "carbon-icons-svelte": "^11.1.0",
         "d3": "^7.6.1",
